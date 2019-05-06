@@ -88,7 +88,10 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
    are in fact (different) kingdom cards, and that numPlayers is valid. 
 
 Cards not in game should initialize supply position to -1 */
-
+void assertTrue(int x, int y);
+int smithyRefactor(struct gameState *state, int handPos, int currectPlayer);
+int sea_hagRefactor(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int choice3);
+int great_hallRefactor(struct gameState *state, int handPos, int currentPlayer);
 int shuffle(int player, struct gameState *state);
 /* Assumes all cards are now in deck array (or hand/played):  discard is
  empty */

@@ -8,7 +8,7 @@
 //5 cards that were refactored per Assignment 2
 int smithyRefactor(struct gameState *state, int handPos, int currentPlayer);
 int adventurerRefactor(struct gameState *state, int handPos, int currentPlayer, int z, int drawntreasure);
-int sea_hagRefactor(struct gameState *state, int handPos, int currentPlayer);
+int sea_hagRefactor(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int choice3);
 int stewardRefactor(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int choice3);
 int great_hallRefactor(struct gameState *state, int handPos, int currentPlayer);
 
@@ -1212,7 +1212,7 @@ if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) )
       }
       return 0;*/
 	//Refactored per Assignment 2
-	return sea_hagRefactor(state, handPos, currentPlayer);
+	return sea_hagRefactor(state, handPos, currentPlayer, choice1, choice2, choice3);
 		
     case treasure_map:
       //search hand for another treasure_map
@@ -1288,7 +1288,7 @@ int adventurerRefactor(struct gameState *state, int handPos, int currentPlayer, 
       	return 0;
 }
 
-int sea_hagRefactor(struct gameState *state, int handPos, int currentPlayer)
+int sea_hagRefactor(struct gameState *state, int handPos, int currentPlayer, int choice1, int choice2, int choice3)
 {
     int i;
 	 for (i = 0; i < state->numPlayers; i++){
@@ -1299,6 +1299,7 @@ int sea_hagRefactor(struct gameState *state, int handPos, int currentPlayer)
 	  state->deck[i][state->deckCount[i]--] = curse;//Top card now a curse
 	}
       }
+	
       return 0;
 }
 
@@ -1332,7 +1333,7 @@ int great_hallRefactor(struct gameState *state, int handPos, int currentPlayer)
 {
       //+1 Card
       drawCard(currentPlayer, state);
-			
+		
       //+1 Actions
       state->numActions++;
 			
@@ -1449,6 +1450,12 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 
-
+void assertTrue(int x, int y)
+{
+	if(x == y)
+		printf("TEST PASSED!\n");
+	else
+		printf("TEST FAILED!\n");
+}
 //end of dominion.c
 

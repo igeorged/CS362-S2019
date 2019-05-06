@@ -1,0 +1,218 @@
+unittest1.c
+**TESTING FUNCTION: smithyRefactor()**
+   Testing to see if card number gained is correct,
+   and cards played number increases**
+
+PRIOR smithy call: Test Player 0 has: 
+5 cards in hand.
+AFTER great_hall call: Test Player 0 has: 
+6 cards in hand.
+TEST FAILED!
+File 'dominion.c'
+Lines executed:21.31% of 563
+Creating 'dominion.c.gcov'
+
+unittest2.c
+player 1 cards: 5
+player 2 cards: 0
+**TESTING FUNCTION: sea_hagRefactor()**
+   Testing to see if discarded card by player 0 is seahag card.**
+PRIOR to sea_hag call by Player 0...
+NO SEA_HAG found in Player 0 discard pile.
+AFTER sea_hag call...
+NO SEAHAG found in Player 0 discard pile.
+TEST FAILED!
+
+
+File 'dominion.c'
+Lines executed:22.74% of 563
+Creating 'dominion.c.gcov'
+
+unittest3.c
+Player1 hand size = 0
+**TESTING FUNCTION: GREAT_HALLREFACTOR**
+   Testing to see if card is played and gained.**
+
+PRIOR great_hall call: Test Player 0 has: 
+5 cards in hand
+0 cards played 
+1 actions
+AFTER great_hall call: Test Player 0 has: 
+5 cards in hand
+1 cards played 
+2 actions
+TEST PASSED!
+File 'dominion.c'
+Lines executed:23.98% of 563
+Creating 'dominion.c.gcov'
+
+unittest4.c
+Player1 hand size = 0
+**TESTING FUNCTION: steward**
+   Testing to see if coins gained (option 2).**
+
+PRIOR steward call: Test Player 0 has: 
+4 coins
+AFTER steward call: Test Player 0 has: 4 coins
+TEST FAILED!
+File 'dominion.c'
+Lines executed:25.40% of 563
+Creating 'dominion.c.gcov'
+
+**TESTING FUNCTION: smithy**
+
+PRIOR smithy call: Test Player 0 has: 
+5 cards in hand
+0 dicarded cards
+1 Actions
+
+AFTER smithy call: Test Player 0 has: 
+6 cards in hand
+0 dicarded cards
+1 Actions
+Cards in hand test: TEST FAILED!
+Cards in discard test: TEST FAILED!
+File 'dominion.c'
+Lines executed:25.40% of 563
+Creating 'dominion.c.gcov'
+
+cardtest2.c
+**TESTING FUNCTION: council_room**
+4 Cards draw test: TEST PASSED!
+Discard test: TEST FAILED!
+Other player hand count test: TEST PASSED!
+Buy number test: TEST PASSED!
+File 'dominion.c'
+Lines executed:26.82% of 563
+Creating 'dominion.c.gcov'
+
+cardtest3.c
+**TESTING FUNCTION: GREAT_HALLREFACTOR**
+   Testing to see if actions increased**
+PRIOR great_hall call: 1 Actions
+AFTER great_hall call: 2  Actions
+TEST PASSED!
+File 'dominion.c'
+Lines executed:26.82% of 563
+Creating 'dominion.c.gcov'
+
+cardtest4.c
+**TESTING FUNCTION: Adventurer **
+PRIOR adventurer call: Player 1 has:  
+AFTER adventurer call: 1  Actions
+TEST FAILED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+unittest1.c
+**TESTING FUNCTION: smithyRefactor()**
+   Testing to see if card number gained is correct,
+   and cards played number increases**
+
+PRIOR smithy call: Test Player 0 has: 
+5 cards in hand.
+AFTER great_hall call: Test Player 0 has: 
+6 cards in hand.
+TEST FAILED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+unittest2.c
+player 1 cards: 5
+player 2 cards: 0
+**TESTING FUNCTION: sea_hagRefactor()**
+   Testing to see if discard pile has curse in it after call.**
+PRIOR to sea_hag call by Player 0...
+Curse FOUND in Player 1 discard pile.
+Curse in discard pile test: TEST PASSED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+unittest3.c
+**TESTING FUNCTION: GREAT_HALLREFACTOR**
+   Testing to see if card is played and gained.**
+
+PRIOR great_hall call: Test Player 0 has: 
+5 cards in hand
+0 cards played 
+1 actions
+AFTER great_hall call: Test Player 0 has: 
+5 cards in hand
+1 cards played 
+2 actions
+TEST PASSED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+unittest4.c
+Player1 hand size = 0
+**TESTING FUNCTION: stewardRefactor**
+   Testing to see if coins gained (option 2).**
+
+PRIOR steward call: Test Player 0 has: 
+4 coins
+AFTER steward call: Test Player 0 has: 4 coins
+TEST FAILED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+**TESTING FUNCTION: smithy**
+
+PRIOR smithy call: Test Player 0 has: 
+5 cards in hand
+0 dicarded cards
+1 Actions
+
+AFTER smithy call: Test Player 0 has: 
+6 cards in hand
+0 dicarded cards
+1 Actions
+Cards in hand test: TEST FAILED!
+Cards in discard test: TEST FAILED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+cardtest2.c
+**TESTING CARD: council_room**
+PRIOR to council_room call Player 0 has 
+5 cards in hand
+1 number of buys
+0 cards in discard pile
+AFTER council_room call Player 0 has 
+8 cards in hand
+2 number of buys
+0 cards in discard pile
+4 Cards draw test: TEST PASSED!
+Discard test: TEST FAILED!
+Other player hand count test: TEST PASSED!
+Buy number test: TEST PASSED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+cardtest3.c
+**TESTING FUNCTION: GREAT_HALL**
+PRIOR great_hall call: 1 Actions, 5 cards in hand, 0 discarded
+AFTER great_hall call: 2 Actions, 5 cards in hand, 0 discarded
+Action test: TEST PASSED!
+Card test: TEST PASSED!
+Discard test: TEST FAILED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
+cardtest4.c
+**TESTING FUNCTION: Adventurer **
+PRIOR adventurer call: Player 1 has:  
+AFTER adventurer call: 1  Actions
+Card obtained test: TEST FAILED!
+File 'dominion.c'
+Lines executed:28.60% of 563
+Creating 'dominion.c.gcov'
+
