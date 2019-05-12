@@ -26,7 +26,8 @@ char *inputString()
    	
 	int i, x, y;
 	
-	//size 6 to accomodate \0 and "reset"
+	//size 6 to accomodate the string being tested in the last if staement
+	//and a final NULL terminator 
 	char string[6];
 	for(i = 0; i < 5; i++)
 	{
