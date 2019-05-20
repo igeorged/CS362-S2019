@@ -6,13 +6,15 @@
 #include "dominion_helpers.h"
 #include "rngs.h"
 
+
+//Testing Smithy
 int main(){
-	int testNum = 10000;
+	srand(NULL);
+	int testNum = 1000;
 	int result;	
-	int seed = 8000;
-	int numPlayer = 2;
-	int p = 1;
-	int rando = 0, handCount, deckCount, good = 0, bad = 0;
+	int seed = 10000;
+	int p;
+	int irandom = 0, handCount, deckCount, pass = 0, fail = 0;
 	int k[10] = {adventurer, council_room, feast, gardens, mine, 
 			sea_hag, smithy, village, baron, great_hall};
 	struct gameState G;
@@ -20,26 +22,37 @@ int main(){
 	for(i = 0; i < testNum; i++)
 	{
 		printf("Test Number: %d\n", i);
+		
+		//Random player number
+		int numPlayer = (rand() % (5 - 2)) + 2;
+		//Set random game seed
 		int gseed = rand() % seed + 1;
 		initializeGame(numPlayer, k, gseed, &G);
+		//set random player to play
+		p = numPlayer;
+		p = rand() % p;
 		
-		rando = rand() % MAX_DECK;
-		G.handCount[p] = rand() % MAX_HAND;
-		handCount = rando;
+		//Set deck
+		G.handCount[p] = (rand() % MAX_HAND) + 1;
 		int r = G.handCount[p];
-		G.discardCount[p] = rand() % MAX_DECK;
-		printf("r = %d, ", r);
-		result = smithyRefactor(&G, 1, p);
-		printf("HandCount = %d\n", G.handCount[p]); 
-		if(result == 0 && G.handCount[p] == (r + 2))
+		irandom = rand() % r;
+		result = smithyRefactor(&G, irandom, p);
+		int q = rand() % 4;
+	
+		if(result == 0 && (r+q) == G.handCount[p])
 		{
-			good++;
+			pass++;
 		}
-
+		else
+		{
+			fail++;
+		}
+		
+		memset(&G, 0, sizeof(struct gameState));
 	}
 			
 	printf("Test Complete!\n");
-	printf("Good = %d\n out of %d", good, testNum);
+	printf("Passed test = %d out of %d\n", pass, testNum);
 
 	return 0;
 }
